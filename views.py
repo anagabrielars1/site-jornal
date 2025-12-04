@@ -1,7 +1,6 @@
-from django.shortcust import render
-from .models import post
+from django.shortcuts import render
+from django.http import HttpResponse
 
-def post_list(request):
-    posts = post.objects.all()
-    return render(request, 'blog/post_list.html', {'posts': posts})
+def index(request):
+    return HttpResponse("Página inicial do jornal")
 
